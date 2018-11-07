@@ -1,6 +1,29 @@
 '''
 DEPLOYMENT:
     pip install paho-mqtt
+    pip install pymongo
+    python3 cleanServer.py
+
+    **make sure mongoDB is installed with the mongo daemon running 
+        - see website for platform specific installation
+Ubuntu Istallation:
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 9DA31620334BD75D9DCB49F368818C72E52529D4
+14.04:
+    echo "deb [ arch=amd64 ] https://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/4.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.0.list
+16.04:
+    echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/4.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.0.list
+18.04:
+    echo "deb [ arch=amd64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.0.list
+
+sudo apt-get update
+
+sudo apt-get install -y mongodb-org
+
+to start mongodb:  sudo service mongod start
+to stop: sudo service mongod stop
+to restart: sudo service mongod restart
+
+mongo shell: mongo
 
 '''
 MONGO_HOST = "localhost"
